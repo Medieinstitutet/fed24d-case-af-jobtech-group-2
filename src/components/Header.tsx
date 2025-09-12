@@ -1,7 +1,9 @@
 import {
   DigiHeader,
   DigiHeaderNavigation,
+  DigiHeaderNavigationItem,
 } from '@digi/arbetsformedlingen-react';
+import { Link } from 'react-router';
 
 export const Header = () => {
   return (
@@ -27,10 +29,10 @@ export const Header = () => {
             afCloseButtonAriaLabel="Stäng meny"
             afNavAriaLabel="Huvudmeny"
           >
-            {/* <DigiHeaderNavigationItem afCurrentPage={true}>
-                <a href="/">Mina bokningar</a>
+            <DigiHeaderNavigationItem afCurrentPage={true}>
+              <a href="/ads">Sök jobb</a>
             </DigiHeaderNavigationItem>
-            <DigiHeaderNavigationItem>
+            {/* <DigiHeaderNavigationItem>
                 <a href="/">Grupper</a>
             </DigiHeaderNavigationItem>
             <DigiHeaderNavigationItem>
@@ -38,6 +40,7 @@ export const Header = () => {
             </DigiHeaderNavigationItem> */}
           </DigiHeaderNavigation>
         </div>
+        <Link to={'/ads'}>Sök jobb</Link>
       </DigiHeader>
     </header>
   );

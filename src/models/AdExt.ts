@@ -39,10 +39,10 @@ export interface AdExt extends Ad {
     label?: string;
   };
 
-  workplace_address: {
-    region?: string;
-    municipality?: string;
-  };
+  // workplace_address: {
+  //   region?: string;
+  //   municipality?: string;
+  // };
 
   application_contacts?: {
     name?: string;
@@ -51,5 +51,5 @@ export interface AdExt extends Ad {
     telephone?: string;
   }[];
 
-  publication_date?: string;
+  // publication_date?: string;
 }
