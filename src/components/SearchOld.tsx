@@ -15,7 +15,7 @@ import { getAds } from '../services/adService';
 import type { AdsLoader } from '../loaders/adsLoader';
 // import { AdsPresentation } from './AdsPresentation';
 
-export const Search = () => {
+export const SearchOld = () => {
   const { ads: initialAds } = useLoaderData<AdsLoader>();
   const [ads, setAds] = useState(initialAds);
   const [loading, setLoading] = useState(false);
@@ -35,8 +35,6 @@ export const Search = () => {
       setLoading(false);
     }
   };
-
-  console.log(loading);
 
   return (
     <>
@@ -76,40 +74,14 @@ export const Search = () => {
           ))}
         </ul>
         {/* <AdsPresentation ads={ads} loading={loading} /> */}
-        {/* {ads.map((ad) => (
-          <DigiInfoCardMulti
-            key={ad.id}
-            afHeading={ad.headline}
-            // afHeading={`${ad.headline} - ${ad.employer?.name}`}
-            afHeadingLevel={InfoCardMultiHeadingLevel.H3}
-            afType={InfoCardMultiType.RELATED}
-            afLinkHref={`/ads/${ad.id}`}
-          >
-            <DigiTypography>
-              <h3>{ad.employer?.name}</h3>
-              {ad.workplace_address?.municipality &&
-                ad.workplace_address?.region && (
-                  <p style={{ marginBottom: '0' }}>
-                    <strong>Plats:</strong> {ad.workplace_address.municipality}{' '}
-                    , {ad.workplace_address.region}
-                  </p>
-                )}
-              {ad.publication_date && (
-                <>
-                  <strong>Publicerad:</strong>{' '}
-                  {new Date(ad.publication_date).toLocaleDateString()}
-                </>
-              )}{' '}
-            </DigiTypography>
-          </DigiInfoCardMulti>
-        ))}
-        {loading && (
+        {loading && <p>Laddar...</p>}
+        {!loading && ads.length === 0 && <p>Inga annonser hittades.</p>}
+        {/* {loading && (
           <DigiLoaderSpinner
             afSize={LoaderSpinnerSize.MEDIUM}
             afText="Laddar"
           ></DigiLoaderSpinner>
-        )}
-        {!loading && ads.length === 0 && <p>Inga annonser hittades.</p>} */}
+        )} */}
       </DigiLayoutContainer>
     </>
   );
