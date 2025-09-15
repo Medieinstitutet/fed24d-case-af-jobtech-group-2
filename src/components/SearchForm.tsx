@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {
   LayoutContainerVariation,
   FormInputSearchVariation,
@@ -10,34 +10,13 @@ import {
   DigiFormInputSearch,
   DigiFormFilter,
 } from '@digi/arbetsformedlingen-react';
-import { useLoaderData } from 'react-router';
 import { getAds } from '../services/adService';
-import type { AdsLoader } from '../loaders/adsLoader';
 import { useAdContext } from '../contexts/useAdContext';
 
 export const SearchForm = () => {
-  const loaderData = useLoaderData<AdsLoader>(); // Get initial data from loader
   const { setAds, searchQuery, setSearchQuery, setLoading, setError } =
     useAdContext(); // Custom hook for context
   const [userInput, setUserInput] = useState(searchQuery);
-
-  useEffect(() => {
-    if (loaderData?.ads.length) {
-      setAds(loaderData.ads);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []); // Hydrate context when component mounts, look for alternative way
-
-  // Site crashes with this useEffect without dependencies
-  // useEffect(() => {
-  //   const setInitialAds = () => {
-  //     setAds(loaderData.ads);
-  //   };
-
-  //   if (!loaderData?.ads.length || ads.length > 0) return;
-
-  //   setInitialAds();
-  // });
 
   const handleSearch = async (e: CustomEvent<string>) => {
     const searchValue = e.detail;
