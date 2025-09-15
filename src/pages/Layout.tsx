@@ -6,6 +6,7 @@ import { LayoutBlockVariation } from '@digi/arbetsformedlingen';
 
 export const Layout = () => {
   return (
+    <>
     <DigiLayoutBlock afVariation={LayoutBlockVariation.TERTIARY}>
       <Header />
       <main>
@@ -13,5 +14,6 @@ export const Layout = () => {
       </main>
       <Footer />
     </DigiLayoutBlock>
+    </>
   );
 };

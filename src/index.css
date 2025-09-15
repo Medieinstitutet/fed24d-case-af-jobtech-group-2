@@ -3,281 +3,74 @@
 
 :root {
   height: 100%;
-  --digi--stratos-100: hsl(300, 18%, 89%);
-  --digi--stratos-400: #654865;
-  --digi--stratos-500: #362636;
-  --digi--stratos-600: #2a1e2a;
 
-  --digi--leaf-100: hsl(204, 28%, 93%);
-  --digi--leaf-200: hsl(206, 28%, 84%);
-  --digi--leaf-400: hsl(206, 28%, 60%);
-  --digi--leaf-500: hsl(206, 28%, 50%);
-  --digi-leaf-600: hsl(206, 28%, 40%);
+  /*--digi--layout-container: black;*/
 
-  --digi--rose-50: hsl(337, 64%, 94%);
-  --digi--rose-100: hsl(337, 66%, 87%);
-  --digi--rose-200: hsl(337, 65%, 75%);
-  --digi--rose-400: hsl(337, 65%, 61%);
-  --digi--rose-500: hsl(337, 65%, 52%);
-  --digi--rose-600: hsl(337, 61%, 46%);
-  --digi--rose-700: hsl(337, 61%, 33%);
-  --digi--rose-900: hsl(337, 57%, 21%);
+  /*containers bakgrundsfärg*/
+  --digi--color--background--primary: #000000;
 
-  --digi--jade-50: hsl(173, 33%, 90%);
-  --digi--jade-100: hsl(171, 35%, 81%);
-  --digi--jade-200: hsl(170, 35%, 63%);
-  --digi--jade-400: hsl(171, 48%, 42%);
-  --digi--jade-500: hsl(171, 93%, 27%);
-  --digi--jade-600: hsl(171, 93%, 22%);
-  --digi--jade-700: hsl(170, 93%, 17%);
-  --digi--jade-900: hsl(171, 93%, 11%);
+  /*body bakgrundsfärg*/
+  .sc-digi-layout-block-h {
+    --digi--layout-block--background--tertiary: #000000;
+  }
 
-  --digi--water-200: hsl(300, 28%, 97%);
-  --digi--water-500: hsl(300, 28%, 82%);
-  --digi--water-700: hsl(300, 28%, 32%);
+  /*text color*/
+  --digi--color--text--primary: white;
 
-  --digi--pear-500: #b7ee4a;
-  --digi--pear-600: #a7d943;
+  /*button background color*/
+  --digi--button--color--background--primary--default: #808080;
 
-  /*LINK*/
-  --digi--sapphire-500: #16b247;
+  /*
+  digi-typography a{
+    color: red;
+  }
+    */
 
-  /*HOVER*/
-  --digi--amethyst-500: #298098;
+  /*Ad text color*/
+  .sc-digi-info-card-multi-h .digi-info-card-multi__link.sc-digi-info-card-multi {
+  color: red;
+  }
 
-  /*INFO*/
-  --digi--indigo-200: hsl(166, 100%, 96%);
-  --digi--indigo-500: hsl(166, 100%, 50%);
-  --digi--indigo-700: hsl(166, 100%, 32%);
+  /*Ad border color*/
+  --digi--color--border--secondary: #808080;
 
-  /*SUCCESS - CHECKBOX*/
-  --digi--forest-200: hsl(55, 42%, 94%);
-  --digi--forest-500: hsl(55, 100%, 29%);
-  --digi--forest-700: hsl(55, 96%, 22%);
 
-  /*WARNING*/
-  --digi--amber-50: hsl(304, 100%, 93%);
-  --digi--amber-200: hsl(304, 100%, 80%);
-  --digi--amber-500: hsl(304, 100%, 50%);
-  --digi--amber-700: hsl(304, 100%, 52%);
-  --digi--amber-900: hsl(304, 100%, 20%);
+  /*  
+  --digi--button--color--background--primary--default: rgb(0, 47, 255);
+  --digi--button--color--background--primary--hover: yellow;
+  --digi--button--color--background--primary--focus:red;
+  --digi--button--color--background--primary--active:green;
+  */
 
-  /*DANGER*/
-  --digi--ruby-200: hsl(185, 8%, 30%);
-  --digi--ruby-500: hsl(184, 100%, 43%);
-  --digi--ruby-700: hsl(184, 77%, 44%);
 
-  --digi--color--border--inverted-3: var(--digi--stratos-400);
-  --digi--color--text--secondary: var(--digi--stratos-500);
-  --digi--color--background--inverted-1: var(--digi--stratos-500);
-  --digi--color--background--radio-secondary: var(--digi--stratos-500);
-  --digi--color--background--checkbox-secondary: var(--digi--stratos-500);
-  --digi--color--border--secondary: var(--digi--stratos-500);
-  --digi--color--icons--secondary: var(--digi--stratos-500);
+  /*button styling*/
+  .sc-digi-button-h .digi-button.sc-digi-button {
+      background-color: #000000;
+      border-radius:0px;
+      border-width: 5px;
+      border-style: dotted;
+      border-color: #808080;
+      color: yellow;;
+  }
 
-  --digi--color--background--neutral-5: var(--digi--leaf-100);
-  --digi--color--border--neutral-1: var(--digi-leaf-100);
-  --digi--color--background--neutral-7: var(--digi--leaf-200);
-
-  --digi--color--border--tertiary: var(--digi--leaf-500);
-  --digi--color--border--quaternary: var(--digi--leaf-500);
-  --digi--color--border--focus: var(--digi--leaf-500);
-
-  --digi--color--background--complementary-2: var(--digi--rose-500);
-
-  --digi--color--background--complementary-1: var(--digi--jade-500);
-  --digi--color--border--radio-primary: var(--digi--jade-500);
-
-  --digi--color--background--neutral-1: var(--digi--water-200);
-
-  --digi--color--background--inverted-5: var(--digi--water-500);
-
-  --digi--indigo-700: var(--digi--water-700);
-  --digi--color--background--inverted-6: var(--digi--water-700);
-  --digi--color--border--inverted-2: var(--digi--water-700);
-
-  --digi--color--background--inverted-4: var(--digi--pear-500);
-
-  --digi--color--text--link: var(--digi--sapphire-500);
-  --digi--color--background--inverted-2: var(--digi--sapphire-500);
-  --digi--color--border--informative: var(--digi--sapphire-500);
-  --digi--color--border--checkbox-focus: var(--digi--sapphire-500);
-  --digi--color--icons--complementary-1: var(--digi--sapphire-500);
-
-  --digi--color--text--link-visited: var(--digi--amethyst-500);
-  --digi--color--icons--complementary-3: var(--digi--amethyst-500);
-
-  --digi--color--background--informative: var(--digi-indigo-500);
-  --digi--color--icons--informative: var(--digi--indigo-500);
-
-  --digi--color--background--inverted-6: var(--digi--indigo-700);
-  --digi--color--border--inverted-2: var(--digi--indigo-700);
-
-  --digi--color--background--success-2: var(--digi--forest-200);
-
-  --digi--color--background--success-1: var(--digi--forest-500);
-  --digi--color--background--radio-primary: var(--digi--forest-500);
-  --digi--color--background--checkbox-primary: var(--digi--forest-500);
-  --digi--color--border--success: var(--digi--forest-500);
-  --digi--color--border--checkbox-primary: var(--digi--forest-500);
-  --digi--color--icons--success: var(--digi--forest-500);
-
-  --digi--color--background--warning-2: var(--digi--amber-50);
-
-  --digi--color--background--warning-1: var(--digi--amber-200);
-  --digi--color--border--warning: var(--digi--amber-200);
-  --digi--color--icons--warning: var(--digi--amber-200);
-
-  --digi--color--background--danger-2: var(--digi--ruby-200);
-
-  --digi--color--text--danger: var(--digi--ruby-500);
-  --digi--color--background--danger-1: var(--digi--ruby-500);
-  --digi--color--border--danger: var(--digi--ruby-500);
-  --digi--color--icons--danger: var(--digi--ruby-500);
-
-  --digi--color--background--danger-4: var(--digi--ruby-700);
-  --digi--stratos-100: hsl(300, 18%, 89%);
-  --digi--stratos-400: #654865;
-  --digi--stratos-500: #362636;
-  --digi--stratos-600: #2a1e2a;
-
-  --digi--leaf-100: hsl(204, 28%, 93%);
-  --digi--leaf-200: hsl(206, 28%, 84%);
-  --digi--leaf-400: hsl(206, 28%, 60%);
-  --digi--leaf-500: hsl(206, 28%, 50%);
-  --digi-leaf-600: hsl(206, 28%, 40%);
-
-  --digi--rose-50: hsl(337, 64%, 94%);
-  --digi--rose-100: hsl(337, 66%, 87%);
-  --digi--rose-200: hsl(337, 65%, 75%);
-  --digi--rose-400: hsl(337, 65%, 61%);
-  --digi--rose-500: hsl(337, 65%, 52%);
-  --digi--rose-600: hsl(337, 61%, 46%);
-  --digi--rose-700: hsl(337, 61%, 33%);
-  --digi--rose-900: hsl(337, 57%, 21%);
-
-  --digi--jade-50: hsl(173, 33%, 90%);
-  --digi--jade-100: hsl(171, 35%, 81%);
-  --digi--jade-200: hsl(170, 35%, 63%);
-  --digi--jade-400: hsl(171, 48%, 42%);
-  --digi--jade-500: hsl(171, 93%, 27%);
-  --digi--jade-600: hsl(171, 93%, 22%);
-  --digi--jade-700: hsl(170, 93%, 17%);
-  --digi--jade-900: hsl(171, 93%, 11%);
-
-  --digi--water-200: hsl(300, 28%, 97%);
-  --digi--water-500: hsl(300, 28%, 82%);
-  --digi--water-700: hsl(300, 28%, 32%);
-
-  --digi--pear-500: #b7ee4a;
-  --digi--pear-600: #a7d943;
-
-  /*LINK*/
-  --digi--sapphire-500: #16b247;
-
-  /*HOVER*/
-  --digi--amethyst-500: #298098;
-
-  /*INFO*/
-  --digi--indigo-200: hsl(166, 100%, 96%);
-  --digi--indigo-500: hsl(166, 100%, 50%);
-  --digi--indigo-700: hsl(166, 100%, 32%);
-
-  /*SUCCESS - CHECKBOX*/
-  --digi--forest-200: hsl(55, 42%, 94%);
-  --digi--forest-500: hsl(55, 100%, 29%);
-  --digi--forest-700: hsl(55, 96%, 22%);
-
-  /*WARNING*/
-  --digi--amber-50: hsl(304, 100%, 93%);
-  --digi--amber-200: hsl(304, 100%, 80%);
-  --digi--amber-500: hsl(304, 100%, 50%);
-  --digi--amber-700: hsl(304, 100%, 52%);
-  --digi--amber-900: hsl(304, 100%, 20%);
-
-  /*DANGER*/
-  --digi--ruby-200: hsl(185, 8%, 30%);
-  --digi--ruby-500: hsl(184, 100%, 43%);
-  --digi--ruby-700: hsl(184, 77%, 44%);
-
-  --digi--color--border--inverted-3: var(--digi--stratos-400);
-  --digi--color--text--secondary: var(--digi--stratos-500);
-  --digi--color--background--inverted-1: var(--digi--stratos-500);
-  --digi--color--background--radio-secondary: var(--digi--stratos-500);
-  --digi--color--background--checkbox-secondary: var(--digi--stratos-500);
-  --digi--color--border--secondary: var(--digi--stratos-500);
-  --digi--color--icons--secondary: var(--digi--stratos-500);
-
-  --digi--color--background--neutral-5: var(--digi--leaf-100);
-  --digi--color--border--neutral-1: var(--digi-leaf-100);
-  --digi--color--background--neutral-7: var(--digi--leaf-200);
-
-  --digi--color--border--tertiary: var(--digi--leaf-500);
-  --digi--color--border--quaternary: var(--digi--leaf-500);
-  --digi--color--border--focus: var(--digi--leaf-500);
-
-  --digi--color--background--complementary-2: var(--digi--rose-500);
-
-  --digi--color--background--complementary-1: var(--digi--jade-500);
-  --digi--color--border--radio-primary: var(--digi--jade-500);
-
-  --digi--color--background--neutral-1: var(--digi--water-200);
-
-  --digi--color--background--inverted-5: var(--digi--water-500);
-
-  --digi--indigo-700: var(--digi--water-700);
-  --digi--color--background--inverted-6: var(--digi--water-700);
-  --digi--color--border--inverted-2: var(--digi--water-700);
-
-  --digi--color--background--inverted-4: var(--digi--pear-500);
-
-  --digi--color--text--link: var(--digi--sapphire-500);
-  --digi--color--background--inverted-2: var(--digi--sapphire-500);
-  --digi--color--border--informative: var(--digi--sapphire-500);
-  --digi--color--border--checkbox-focus: var(--digi--sapphire-500);
-  --digi--color--icons--complementary-1: var(--digi--sapphire-500);
-
-  --digi--color--text--link-visited: var(--digi--amethyst-500);
-  --digi--color--icons--complementary-3: var(--digi--amethyst-500);
-
-  --digi--color--background--informative: var(--digi-indigo-500);
-  --digi--color--icons--informative: var(--digi--indigo-500);
-
-  --digi--color--background--inverted-6: var(--digi--indigo-700);
-  --digi--color--border--inverted-2: var(--digi--indigo-700);
-
-  --digi--color--background--success-2: var(--digi--forest-200);
-
-  --digi--color--background--success-1: var(--digi--forest-500);
-  --digi--color--background--radio-primary: var(--digi--forest-500);
-  --digi--color--background--checkbox-primary: var(--digi--forest-500);
-  --digi--color--border--success: var(--digi--forest-500);
-  --digi--color--border--checkbox-primary: var(--digi--forest-500);
-  --digi--color--icons--success: var(--digi--forest-500);
-
-  --digi--color--background--warning-2: var(--digi--amber-50);
-
-  --digi--color--background--warning-1: var(--digi--amber-200);
-  --digi--color--border--warning: var(--digi--amber-200);
-  --digi--color--icons--warning: var(--digi--amber-200);
-
-  --digi--color--background--danger-2: var(--digi--ruby-200);
-
-  --digi--color--text--danger: var(--digi--ruby-500);
-  --digi--color--background--danger-1: var(--digi--ruby-500);
-  --digi--color--border--danger: var(--digi--ruby-500);
-  --digi--color--icons--danger: var(--digi--ruby-500);
-
-  --digi--color--background--danger-4: var(--digi--ruby-700);
+  /*heading styling*/
+  digi-typography{
+    h1, h2, h3{
+      color: red;
+    }
+  }
 }
 
 /* Test */
 
+
 body {
   margin: 0;
+
 }
 
 main {
+
   flex: 1;
   width: 100%;
   margin-bottom: 1rem;
