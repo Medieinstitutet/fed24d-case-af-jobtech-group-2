@@ -9,4 +9,7 @@ export type Ad = {
     municipality?: string;
   };
   publication_date?: string;
+    description: {
+    text_formatted: string;
+  };
 };

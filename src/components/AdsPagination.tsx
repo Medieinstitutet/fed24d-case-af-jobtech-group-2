@@ -3,7 +3,9 @@ import { useAdContext } from '../hooks/useAdContext';
 
 export const AdsPagination = () => {
   const { currentPage, setCurrentPage, totalResult } = useAdContext();
-  const totalPages = Math.ceil(totalResult / 10);
+//  const totalPages = Math.ceil(totalResult / 10);
+  const totalPages = totalResult > 0 ? Math.ceil(totalResult / 10) : 1;
+
   const startValue = (currentPage - 1) * 10 + 1;
   const endValue = Math.min(startValue + 9, totalResult);
 

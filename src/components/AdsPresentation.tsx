@@ -7,6 +7,7 @@ import {
   InfoCardMultiType,
 } from '@digi/arbetsformedlingen';
 import { useAdContext } from '../hooks/useAdContext';
+import { JobsPerMunicipalityChart } from './BarChart';
 
 export const AdsPresentation = () => {
   const { ads, currentPage } = useAdContext();
@@ -16,6 +17,12 @@ export const AdsPresentation = () => {
   return (
     <div key={currentPage}>
       <DigiTypography>
+        {ads.length > 0 && (
+          <>
+            <JobsPerMunicipalityChart ads={ads} />
+            <h3>Här kan du se hur många jobb som finns på respektive ort</h3>
+          </>
+        )}
         {currentAds.map((ad) => {
           return (
             <DigiInfoCardMulti

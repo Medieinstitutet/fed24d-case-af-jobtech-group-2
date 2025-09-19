@@ -3,9 +3,7 @@ import type { Ad } from './Ad';
 export interface AdExt extends Ad {
   application_deadline?: string;
 
-  description: {
-    text_formatted: string;
-  };
+
 
   employment_type?: {
     label?: string;
